@@ -8,17 +8,81 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+
         android:text="Calculadora de IMC"
-        android:layout_gravity="center"
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:layout_marginHorizontal="16dp"
+        android:textSize="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="textStart"
+        android:text="O Índice de Massa Corporal (IMC) é uma medida utilizada para avaliar se uma pessoa está em um peso saudável em relação à sua altura. Ele é calculado dividindo-se o peso da pessoa (em quilogramas) pela altura (em metros) elevada ao quadrado"
+        tools:ignore="RtlCompat" />
 
     <EditText
         android:id="@+id/Peso"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:hint="Peso"
+        android:inputType="numberDecimal"
+        android:layout_marginHorizontal="16dp"
         />
+
+    <EditText
+        android:id="@+id/Altura"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Altura"
+        android:inputType="numberDecimal"
+        android:layout_marginHorizontal="16dp"
+        />
+
+    <Button
+        android:id="@+id/Confirmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="confirmar"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:textAllCaps="true"
+        />
+
+    <TextView
+        android:id="@+id/Resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/DescricaoResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_marginTop="16dp"
+        />
+
 </LinearLayout>
