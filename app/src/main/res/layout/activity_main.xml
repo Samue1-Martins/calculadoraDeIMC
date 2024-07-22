@@ -6,60 +6,83 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/roxo">
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textAllCaps="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="start"
         android:textStyle="bold"
         android:textSize="24sp"
-        android:layout_marginTop="16dp"
-        android:text="Calculadora de IMC"
+        android:layout_marginTop="32dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textAllCaps="true"
         android:layout_marginHorizontal="16dp"
         android:textSize="16sp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:textAlignment="textStart"
-        android:text="O Índice de Massa Corporal (IMC) é uma medida utilizada para avaliar se uma pessoa está em um peso saudável em relação à sua altura. Ele é calculado dividindo-se o peso da pessoa (em quilogramas) pela altura (em metros) elevada ao quadrado"
+        android:text="@string/descricao_imc"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_customizado"
+        android:padding="16dp"
+        android:layout_gravity="center"
+        android:radius="25dp"
         tools:ignore="RtlCompat" />
+
 
     <EditText
         android:id="@+id/Peso"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Peso"
+        android:hint="@string/peso"
         android:inputType="numberDecimal"
         android:layout_marginHorizontal="16dp"
+        android:background="@drawable/edit_text"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/roxoEscuro"
+        android:autofillHints=""
         />
 
     <EditText
         android:id="@+id/Altura"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Altura"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:hint="@string/altura"
         android:inputType="numberDecimal"
         android:layout_marginHorizontal="16dp"
+        android:background="@drawable/edit_text"
+        android:textAlignment="center"
+        android:textColor="@color/roxoEscuro"
+        android:autofillHints=""
         />
 
     <Button
         android:id="@+id/Confirmar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="confirmar"
+        android:text="@string/confirmar"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
         android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/shape_customizado"
         />
 
     <TextView
@@ -71,6 +94,14 @@
         android:textStyle="bold"
         android:textSize="24sp"
         android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:background="@drawable/shape_customizado"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="center"
+        android:radius="25dp"
+        tools:ignore="RtlCompat"
         />
 
     <TextView
@@ -82,6 +113,15 @@
         android:textStyle="bold"
         android:textSize="16sp"
         android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="center"
+        android:radius="25dp"
+        android:background="@drawable/shape_customizado"
+        tools:ignore="RtlCompat"
+
         />
 
 </LinearLayout>

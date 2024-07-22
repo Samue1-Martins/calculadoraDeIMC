@@ -3,20 +3,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:ignore="ExtraText"
     android:shape="rectangle"
-    android:width="100dp"
     android:height="5dp"
     >
 
 
-    <solid android:color="#FFFFFF"/>
+    <solid android:color="@color/roxoClaro"/>
 
-    <corners android:topLeftRadius="0dp"
-        android:topRightRadius="0dp"
-        android:bottomLeftRadius="25dp"
-        android:bottomRightRadius="25dp"
+    <corners
+        android:radius="16dp"
         />
 
-    <stroke android:width="0dp"
+    <stroke android:width="2dp"
         android:color= "#00000000"/>
+
+    <padding
+        android:left="16dp"
+        android:top="8dp"
+        android:right="16dp"
+        android:bottom="8dp" />
 
 </shape>

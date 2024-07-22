@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">calculadoa de IMC</string>
+    <string name="app_name">Calculadora IMC</string>
+    <string name="descricao_imc">O Índice de Massa Corporal (IMC) é uma medida utilizada para avaliar se uma pessoa está em um peso saudável em relação à sua altura.Ele é calculado dividindo-se o peso da pessoa (em quilogramas) pela altura (em metros) elevada ao quadrado.</string>
+    <string name="peso">Peso Ex.: 57.0</string>
+    <string name="altura">Altura Ex.: 1.72</string>
+    <string name="confirmar">Confirmar</string>
+
 </resources>

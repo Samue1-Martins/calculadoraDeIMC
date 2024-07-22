@@ -1,8 +1,10 @@
 package com.example.calculadoadeimc
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -34,31 +36,36 @@ class MainActivity : AppCompatActivity() {
             val altura = alturaStr.toDoubleOrNull()
 
             if (peso != null && altura != null) {
-                val imc = peso / (altura * altura)
 
+                val imc = peso / (altura * altura)
                 if (imc < 18.5) {
                     resultadoTv.text = "IMC: %.2f".format(imc)
-                    descricaoResultadoTv.text = "Você está abaixo do peso. É importante procurar orientação médica para identificar possíveis causas e garantir que sua nutrição e saúde estejam adequadas."
+                    descricaoResultadoTv.text =
+                        "Você está abaixo do peso. É importante procurar orientação médica para identificar possíveis causas e garantir que sua nutrição e saúde estejam adequadas."
                 }
                 if (imc in 18.5..24.9) {
                     resultadoTv.text = "IMC: %.2f".format(imc)
-                    descricaoResultadoTv.text = "Você está com peso normal. Mantenha um estilo de vida saudável para continuar nessa faixa."
+                    descricaoResultadoTv.text =
+                        "Você está com peso normal. Mantenha um estilo de vida saudável para continuar nessa faixa."
                 }
                 if (imc in 25.0..29.9) {
                     resultadoTv.text = "IMC: %.2f".format(imc)
-                    descricaoResultadoTv.text = "Você está com sobrepeso. Considere adotar hábitos mais saudáveis, como uma dieta equilibrada e prática regular de exercícios físicos."
+                    descricaoResultadoTv.text =
+                        "Você está com sobrepeso. Considere adotar hábitos mais saudáveis, como uma dieta equilibrada e prática regular de exercícios físicos."
                 }
                 if (imc >= 30.0) {
                     resultadoTv.text = "IMC: %.2f".format(imc)
-                    descricaoResultadoTv.text = "Você está com obesidade. É importante buscar orientação médica para gerenciar seu peso e reduzir o risco de condições de saúde graves."
+                    descricaoResultadoTv.text =
+                        "Você está com obesidade. É importante buscar orientação médica para gerenciar seu peso e reduzir o risco de condições de saúde graves."
                 }
+            } else {
+                descricaoResultadoTv.text = ""
+                resultadoTv.text = "Ambos os campos de valores precisam estar preenchidos!"
             }
         }
-
         confirmarBtn.setOnClickListener {
             calcularImc()
         }
     }
 }
-
 
