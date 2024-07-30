@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -9,57 +9,66 @@
     tools:context=".MainActivity"
     android:background="@color/roxo">
 
-
     <TextView
+        android:id="@+id/calculadoratitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:gravity="start"
+        android:gravity="center"
         android:textStyle="bold"
         android:textSize="24sp"
         android:layout_marginTop="32dp"
         android:text="@string/app_name"
         android:textColor="@color/white"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
 
     <TextView
+        android:id="@+id/descricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginHorizontal="16dp"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:textAlignment="textStart"
-        android:text="@string/descricao_imc"
-        android:textColor="@color/white"
-        android:background="@drawable/shape_customizado"
-        android:padding="16dp"
         android:layout_gravity="center"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/shape_customizado"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
         android:radius="25dp"
-        tools:ignore="RtlCompat" />
-
+        android:text="@string/descricao_imc"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/calculadoratitle"
+        app:layout_constraintTop_toBottomOf="@id/calculadoratitle"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlCompat"
+        tools:layout_editor_absoluteY="105dp" />
 
     <EditText
         android:id="@+id/Peso"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:hint="@string/peso"
         android:inputType="numberDecimal"
         android:layout_marginHorizontal="16dp"
         android:background="@drawable/edit_text"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:textAlignment="center"
         android:textColor="@color/roxoEscuro"
         android:autofillHints=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descricao"
+        app:layout_constraintEnd_toStartOf="@id/Altura"
         />
 
     <EditText
         android:id="@+id/Altura"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="32dp"
         android:hint="@string/altura"
         android:inputType="numberDecimal"
@@ -68,6 +77,9 @@
         android:textAlignment="center"
         android:textColor="@color/roxoEscuro"
         android:autofillHints=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Peso"
+        app:layout_constraintTop_toBottomOf="@id/descricao"
         />
 
     <Button
@@ -77,12 +89,14 @@
         android:text="@string/confirmar"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/shape_customizado"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/Altura"
         />
 
     <TextView
@@ -93,7 +107,7 @@
         android:textAllCaps="true"
         android:textStyle="bold"
         android:textSize="24sp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:textColor="@color/white"
         android:padding="16dp"
         android:background="@drawable/shape_customizado"
@@ -101,7 +115,8 @@
         android:layout_marginEnd="16dp"
         android:layout_gravity="center"
         android:radius="25dp"
-        tools:ignore="RtlCompat"
+        tools:ignore="MissingConstraints,RtlCompat"
+        app:layout_constraintTop_toBottomOf="@id/Confirmar"
         />
 
     <TextView
@@ -112,7 +127,7 @@
         android:textAllCaps="true"
         android:textStyle="bold"
         android:textSize="16sp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:textColor="@color/white"
         android:padding="16dp"
         android:layout_marginStart="16dp"
@@ -120,8 +135,8 @@
         android:layout_gravity="center"
         android:radius="25dp"
         android:background="@drawable/shape_customizado"
-        tools:ignore="RtlCompat"
-
+        tools:ignore="MissingConstraints,RtlCompat"
+        app:layout_constraintTop_toBottomOf="@id/Resultado"
         />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
